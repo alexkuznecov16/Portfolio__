@@ -1,0 +1,96 @@
+.header {
+  position: sticky;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #34495E;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 5px 0;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 2px;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0 7px 8px #D5D8DC;
+}
+.header .toOpen {
+  display: none;
+  cursor: pointer;
+}
+.header .mobile {
+  display: none;
+  left: 100%;
+}
+.header .mobile.opened {
+  position: fixed;
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100000;
+  background-color: #34495E;
+  animation-name: toLeft;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header .mobile.opened .toClose {
+  color: red;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+@keyframes toLeft {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.header__nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__nav a {
+  padding: 20px;
+  transition: 0.1s linear;
+  font-size: 18px;
+  color: #ECF0F1;
+  font-weight: 200;
+}
+.header__nav a:hover {
+  background-color: #BDC3C7;
+  color: #2C3E50;
+}
+
+@media screen and (min-width: 600px) {
+  .header .mobile.opened {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__nav.full {
+    display: none;
+  }
+  .header .toOpen {
+    display: block;
+    color: #BDC3C7;
+    font-size: 35px;
+  }
+  .header {
+    padding: 10px 0;
+  }
+}/*# sourceMappingURL=Header.css.map */

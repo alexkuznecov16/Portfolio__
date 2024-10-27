@@ -1,0 +1,328 @@
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.intro {
+  width: 100%;
+  height: calc(100vh - 71px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/city.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.intro .mouse {
+  width: 50px;
+  height: 90px;
+  border: 3px solid #333;
+  border-radius: 60px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
+}
+.intro .mouse::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #333;
+  border-radius: 50%;
+  opacity: 1;
+  animation: wheel 2s infinite;
+}
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 60px;
+  }
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* dark overlay */
+  mix-blend-mode: darken; /* blend mode to darken */
+  z-index: 1;
+}
+.intro__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.intro__inner h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 8px;
+}
+.intro__inner p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 8px 0;
+}
+.intro__inner span {
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+}
+.intro__inner a {
+  position: relative;
+  padding: 12px 24px;
+  background-color: #3498DB;
+  color: #FFF;
+  margin-top: 20px;
+  border: 1px solid #3498DB;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.intro__inner a:hover {
+  background-color: #2C3E50;
+  color: #fff;
+  border-color: #2C3E50;
+}
+
+.Main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.Main__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Main__inner .title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.Main__inner .more {
+  background-color: #2C3E50;
+  color: #fff;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid transparent;
+  transition: 0.1s linear;
+  width: -moz-max-content;
+  width: max-content;
+}
+.Main__inner .more:hover {
+  background-color: #fff;
+  color: #2C3E50;
+  border: 1px solid #2C3E50;
+}
+.Main__inner .programming {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Main__inner .programming__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.Main__inner .programming__inner .programming-item {
+  position: relative;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  border: 1px solid #3498DB;
+  color: #3498DB;
+  padding: 40px;
+  transition: 0.1s linear;
+}
+.Main__inner .programming__inner .programming-item:hover {
+  background-color: #3498DB;
+  transform: scale(1.02);
+}
+.Main__inner .programming__inner .programming-item:hover svg, .Main__inner .programming__inner .programming-item:hover a {
+  color: #fff;
+}
+.Main__inner .programming__inner .programming-item svg {
+  color: #2C3E50;
+}
+.Main__inner .programming__inner .programming-item a {
+  color: #2C3E50;
+}
+.Main__inner .programming__inner .programming-item a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.Main__inner .about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.Main__inner .about__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.Main__inner .about__inner img {
+  width: 250px;
+  height: auto;
+}
+.Main__inner .about__inner p {
+  max-width: 50%;
+}
+.Main__inner .contacts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.Main__inner .contacts__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Main__inner .contacts__inner .contact-item {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5019607843);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.Main__inner .contacts__inner .contact-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5019607843);
+}
+.Main__inner .contacts__inner .contact-item:hover svg {
+  color: #fff;
+}
+.Main__inner .contacts__inner .contact-item:hover::after {
+  transform: translate(0);
+}
+.Main__inner .contacts__inner .contact-item.instagram::after {
+  background-color: #833AB4;
+}
+.Main__inner .contacts__inner .contact-item.linkedin::after {
+  background-color: #3498DB;
+}
+.Main__inner .contacts__inner .contact-item.github::after {
+  background-color: #333;
+}
+.Main__inner .contacts__inner .contact-item::after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  transform: translate(0, 70px);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.Main__inner .contacts__inner .contact-item svg {
+  font-size: 26px;
+  color: #67798e;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .container {
+    max-width: 700px;
+  }
+  .intro .mouse {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .Main__inner .about__inner {
+    flex-wrap: wrap;
+  }
+  .Main__inner .about__inner img {
+    order: 1;
+  }
+  .Main__inner .about__inner p {
+    max-width: 100%;
+    order: 2;
+  }
+}
+@media screen and (max-width: 750px) {
+  .container {
+    max-width: 450px;
+  }
+}
+main {
+  flex: 1 auto;
+}/*# sourceMappingURL=main.css.map */
