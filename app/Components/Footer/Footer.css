@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  background-color: #AED6F1;
-  border-top: 1px solid #BDC3C7;
+  background-color: #aed6f1;
+  border-top: 1px solid #bdc3c7;
 }
 .footer p {
   padding: 20px 0;
@@ -9,6 +9,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #2C3E50;
+  color: #2c3e50;
   text-align: center;
 }/*# sourceMappingURL=Footer.css.map */

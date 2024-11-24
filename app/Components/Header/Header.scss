@@ -1,115 +1,116 @@
 .header {
-  position: sticky;
-  left: 0;
-  top: 0;
-  width: 100%;
-  background-color: #34495E;
-  border-bottom: 1px solid rgba(0,0,0,.3);
-  z-index: 1000;
-  padding: 5px 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -o-transform: translate(-50%);
-    transform: translate(-50%);
-    bottom: 2px;
+    position: sticky;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 2px;
-    box-shadow: 0 7px 8px #D5D8DC;
-  }
+    background-color: #34495e;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    padding: 5px 0;
 
-  .toOpen {
-    display: none;
-    cursor: pointer;
-  }
-
-  .mobile {
-    display: none;
-    left: 100%;
-    &.opened {
-      position: fixed;
-      display: block;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: 100000;
-      background-color: #34495E;
-      animation-name: toLeft;
-      animation-duration: .2s;
-      animation-fill-mode: forwards;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      & .toClose {
-        color: red;
+    &::after {
+        content: '';
         position: absolute;
-        top: 5px;
-        right: 5px;
-        font-size: 40px;
+        left: 50%;
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
+        transform: translate(-50%);
+        bottom: 2px;
+        width: 100%;
+        height: 2px;
+        box-shadow: 0 7px 8px #d5d8dc;
+    }
+
+    .toOpen {
+        display: none;
         cursor: pointer;
-      }
     }
-  }
 
-  @keyframes toLeft {
-    from {
-      left: 100%;
+    .mobile {
+        display: none;
+        left: 100%;
+        &.opened {
+            position: fixed;
+            display: block;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 100000;
+            background-color: #34495e;
+            animation-name: toLeft;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            & .toClose {
+                color: red;
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                font-size: 40px;
+                cursor: pointer;
+            }
+        }
     }
-    to {
-      left: 0;
+
+    @keyframes toLeft {
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0;
+        }
     }
-  }
 
-  &__nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    & a {
-      padding: 20px;
-      -webkit-transition: .1s linear;
-      -moz-transition: .1s linear;
-      -ms-transition: .1s linear;
-      -o-transition: .1s linear;
-      transition: .1s linear;
-      font-size: 18px;
-      color: #ECF0F1;
-      font-weight: 200;
+        & a {
+            padding: 20px;
+            -webkit-transition: 0.1s linear;
+            -moz-transition: 0.1s linear;
+            -ms-transition: 0.1s linear;
+            -o-transition: 0.1s linear;
+            transition: 0.1s linear;
+            font-size: 18px;
+            color: #ecf0f1;
+            font-weight: 200;
+            text-align: center;
 
-      &:hover {
-        background-color: #BDC3C7;
-        color: #2C3E50;
-      }
+            &:hover {
+                background-color: #bdc3c7;
+                color: #2c3e50;
+            }
+        }
     }
-  }
 }
 
 @media screen and (min-width: 600px) {
-  .header .mobile.opened {
-    display: none;
-  }
+    .header .mobile.opened {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .header__nav.full {
-      display: none;
-  }
+    .header__nav.full {
+        display: none;
+    }
 
-  .header .toOpen {
-      display: block;
-      color: #BDC3C7;
-      font-size: 35px;
-  }
+    .header .toOpen {
+        display: block;
+        color: #bdc3c7;
+        font-size: 35px;
+    }
 
-  .header {
-    padding: 10px 0;
-  }
+    .header {
+        padding: 10px 0;
+    }
 }

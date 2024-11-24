@@ -23,7 +23,7 @@ export default function Header() {
 			<div className='container'>
 				<nav className='header__nav full'>
 					<Link href='/'>Overview</Link>
-					<Link href='/programming'>Programming</Link>
+					<Link href='/projects'>Projects</Link>
 					<Link href='/profile'>Profile</Link>
 					<Link href='/contacts'>Get in Touch</Link>
 				</nav>
@@ -34,8 +34,8 @@ export default function Header() {
 					<Link onClick={closeMobile} href='/'>
 						Overview
 					</Link>
-					<Link onClick={closeMobile} href='/programming'>
-						Programming
+					<Link onClick={closeMobile} href='/projects'>
+						Projects
 					</Link>
 					<Link onClick={closeMobile} href='/profile'>
 						Profile

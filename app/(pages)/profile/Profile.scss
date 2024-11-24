@@ -1,0 +1,65 @@
+.Profile {
+  padding: 50px 0;
+
+  &__container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0 1rem;
+
+    animation: fadeIn 1s ease-in-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    img {
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05);
+}
+    }
+  }
+}
