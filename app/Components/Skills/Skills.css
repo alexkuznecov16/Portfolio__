@@ -1,0 +1,48 @@
+.Skills {
+  padding: 20px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #f9f9f9;
+}
+.Skills a.more {
+  margin-top: 50px;
+}
+.Skills .Skills__inner {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+.Skills .marquee {
+  display: flex;
+  gap: 20px;
+  animation: scroll 15s linear infinite;
+}
+.Skills .marquee::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 100%;
+}
+.Skills .skill-logo {
+  flex: 0 0 auto;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .marquee img {
+    width: 100px;
+    height: 100px;
+  }
+}/*# sourceMappingURL=Skills.css.map */

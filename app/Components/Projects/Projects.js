@@ -14,7 +14,7 @@ export default function Projects({count = null}) {
 		},
 		{
 			title: 'FK Spartaks Official Website Replica',
-			description: 'Created a feature-rich replica of the FK Spartaks website using Next.js, including team stats, match countdowns, player profiles, and ticket management, with fake JSON data.',
+			description: 'Created a feature-rich replica of the FK Spartaks website using Next.js, including team stats, match countdowns, player profiles, and ticket management, with simulated JSON data.',
 			github: 'https://github.com/alexkuznecov16/football-club',
 			link: 'https://football-club-six.vercel.app/',
 			image: '/project-2.png',

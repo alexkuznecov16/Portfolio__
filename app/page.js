@@ -8,6 +8,7 @@ import {FaEye, FaServer} from 'react-icons/fa';
 import Socials from './Components/Socials/Socials';
 import introImg from '/public/city.jpg';
 import Projects from './Components/Projects/Projects';
+import Skills from './Components/Skills/Skills';
 
 export default function Home() {
 	return (
@@ -18,12 +19,18 @@ export default function Home() {
 					<div className='intro__inner'>
 						<span>I am</span>
 						<h1 className='intro-title'>Alexander Kuznecov</h1>
-						<p>Web developer</p>
-						<a href='https://github.com/alexkuznecov16'>Github</a>
+						<p>Frontend, Backend developer</p>
+						<div className='btn-block'>
+							{/* <Link href='https://github.com/alexkuznecov16'>Github</Link> */}
+							<Link download={true} href='https://github.com/alexkuznecov16'>
+								Resume
+							</Link>
+						</div>
 					</div>
 				</div>
 				<div className='mouse'></div>
 			</div>
+			<Skills />
 			<main className='Main'>
 				<div className='container'>
 					<div className='Main__inner'>
