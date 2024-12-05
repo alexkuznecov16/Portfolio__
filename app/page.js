@@ -32,7 +32,7 @@ export default function Home() {
 						<h1 className='intro-title'>Alexander Kuznecov</h1>
 						<p>Frontend, Backend developer</p>
 						<div className='btn-block'>
-							<Link download='AlexanderKuznecovResume.pdf' href='/AlexanderKuznecovResume.pdf'>
+							<Link target='_blank' download='AlexanderKuznecovResume.pdf' href='/AlexanderKuznecovResume.pdf'>
 								Resume
 							</Link>
 						</div>
