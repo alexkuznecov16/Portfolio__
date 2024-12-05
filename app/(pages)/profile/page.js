@@ -15,7 +15,7 @@ export default function page() {
 					<div className='Profile__inner'>
 						<div className='Profile__content'>
 							<p className='Profile__text'>
-								Hi, my name is Alex and I'm a passionate web developer with experience in both frontend and backend. My journey started in 2020 when I discovered programming through Python, Unity and Unreal Engine technologies. But what fascinated me the most was web development because of the ability to immediately see the results of my labor in HTML and CSS.
+								Hi, my name is Alex and I&apos;m a passionate web developer with experience in both frontend and backend. My journey started in 2020 when I discovered programming through Python, Unity and Unreal Engine technologies. But what fascinated me the most was web development because of the ability to immediately see the results of my labor in HTML and CSS.
 								<br />
 								<br />
 								Today, I build high-quality web applications using technologies such as React, Next.js and Vue.js for the frontend, and Node.js and Django for server-side development. I am equally interested in working with interfaces and designing robust server-side solutions with MySQL databases.
