@@ -51,7 +51,7 @@ export default function Projects({count = null}) {
 
 	const projectsToShow = count == null ? data : data.slice(0, count);
 	return (
-		<div className='Projects'>
+		<div data-aos='fade-up' className='Projects'>
 			<h4 className='title'>Projects</h4>
 			<div className='Projects__inner'>
 				{projectsToShow.map((item, index) => (

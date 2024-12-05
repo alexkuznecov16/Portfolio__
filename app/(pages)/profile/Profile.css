@@ -9,7 +9,7 @@
 .Profile__inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 @media (min-width: 768px) {
@@ -18,26 +18,19 @@
     justify-content: space-between;
   }
 }
+@media (max-width: 800px) {
+  .Profile__inner {
+    align-items: center;
+  }
+}
 .Profile__content {
   flex: 1;
-  font-size: 1.125rem;
-  line-height: 1.8;
   color: #333;
 }
 .Profile__text {
   margin: 0;
   padding: 0 1rem;
-  animation: fadeIn 1s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  font-size: clamp(12px, 2vw, 16px);
 }
 .Profile__image {
   flex-shrink: 0;
@@ -46,6 +39,8 @@
 }
 .Profile__image img {
   border-radius: 12px;
+  width: clamp(200px, 28vw, 500px);
+  height: auto;
   transition: transform 0.3s ease;
 }
 .Profile__image img:hover {

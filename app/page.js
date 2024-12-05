@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
@@ -9,8 +10,18 @@ import Socials from './Components/Socials/Socials';
 import introImg from '/public/city.jpg';
 import Projects from './Components/Projects/Projects';
 import Skills from './Components/Skills/Skills';
+import {useEffect} from 'react';
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+	useEffect(() => {
+		Aos.init({
+			duration: 800,
+			once: false,
+		});
+	}, []);
 	return (
 		<>
 			<Header />
@@ -22,7 +33,7 @@ export default function Home() {
 						<p>Frontend, Backend developer</p>
 						<div className='btn-block'>
 							{/* <Link href='https://github.com/alexkuznecov16'>Github</Link> */}
-							<Link download={true} href='https://github.com/alexkuznecov16'>
+							<Link download='AlexanderKuznecovResume.pdf' href='/AlexanderKuznecovResume.pdf'>
 								Resume
 							</Link>
 						</div>
@@ -34,8 +45,8 @@ export default function Home() {
 			<main className='Main'>
 				<div className='container'>
 					<div className='Main__inner'>
-						<Projects count={3} />
-						<div className='about'>
+						<Projects  count={3} />
+						<div data-aos='fade-up' className='about'>
 							<h4 className='title'>Profile</h4>
 							<div className='about__inner'>
 								<p className='text'>
@@ -47,7 +58,7 @@ export default function Home() {
 								Full profile
 							</Link>
 						</div>
-						<div className='contacts'>
+						<div data-aos='fade-up' className='contacts'>
 							<h4 className='title'>Get in Touch</h4>
 							<div className='contacts__inner'>
 								<Socials />

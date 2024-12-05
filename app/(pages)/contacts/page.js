@@ -10,7 +10,7 @@ export default function page() {
 	return (
 		<>
 			<Header />
-			<main className='Contacts'>
+			<main data-aos='fade-up' className='Contacts'>
 				<h4 className='title'>Contacts</h4>
 				<div className='container'>
 					<div className='Contacts__inner'>
