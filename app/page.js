@@ -32,7 +32,6 @@ export default function Home() {
 						<h1 className='intro-title'>Alexander Kuznecov</h1>
 						<p>Frontend, Backend developer</p>
 						<div className='btn-block'>
-							{/* <Link href='https://github.com/alexkuznecov16'>Github</Link> */}
 							<Link download='AlexanderKuznecovResume.pdf' href='/AlexanderKuznecovResume.pdf'>
 								Resume
 							</Link>
@@ -45,7 +44,7 @@ export default function Home() {
 			<main className='Main'>
 				<div className='container'>
 					<div className='Main__inner'>
-						<Projects  count={3} />
+						<Projects count={3} />
 						<div data-aos='fade-up' className='about'>
 							<h4 className='title'>Profile</h4>
 							<div className='about__inner'>
